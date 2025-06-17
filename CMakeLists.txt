@@ -6,6 +6,8 @@ find_package(catkin REQUIRED
   COMPONENTS 
   message_generation 
   std_msgs 
+  geometry_msgs
+  shape_msgs
 #  actionlib_msgs 
 )
 
@@ -18,6 +20,7 @@ find_package(catkin REQUIRED
 # Declare the service files to be built
 add_service_files(FILES
   Prepare.srv
+  Pick.srv
 )
 
 # add_action_files(FILES
@@ -28,10 +31,14 @@ add_service_files(FILES
 generate_messages(
   DEPENDENCIES
   std_msgs
+  geometry_msgs
+  shape_msgs
 )
 
 # Declare that this catkin package's runtime dependencies
 catkin_package(
   CATKIN_DEPENDS 
-  std_msgs 
+  std_msgs
+  geometry_msgs
+  shape_msgs
 )

@@ -1,0 +1,10 @@
+# Object specification
+shape_msgs/Mesh object_mesh      # The actual mesh data of the object
+geometry_msgs/Pose object_pose   # Current pose of the object in world frame
+
+# Grasp specifications
+geometry_msgs/PoseArray grasps   # Array of possible grasp poses relative to object frame
+
+---
+bool success
+string message
